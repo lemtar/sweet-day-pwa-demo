@@ -2,8 +2,8 @@ const CACHE_NAME = "sweet-day-pwa-v2";
 const APP_SHELL = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./script.js",
+  "./styles.css?v=demo-presets-1",
+  "./script.js?v=demo-presets-1",
   "./manifest.json",
   "./icons/icon.svg"
 ];
