@@ -1,4 +1,4 @@
-const CACHE_NAME = "sweet-day-pwa-v1";
+const CACHE_NAME = "sweet-day-pwa-v2";
 const APP_SHELL = [
   "./",
   "./index.html",

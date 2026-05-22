@@ -17,6 +17,30 @@ This version is a lightweight PWA shell:
 - Order drawer: selected items plus name, phone, date, weight, filling, inscription, delivery/self-pickup notes.
 - Mobile feel: bottom navigation and installable PWA shell.
 
+## Demo Business Presets
+
+Use the `biz` URL parameter to switch the same PWA template to another niche:
+
+    ?biz=cakes
+    ?biz=flowers
+    ?biz=toys
+    ?biz=grocery
+
+For Taras's private demo switcher, add `switcher=1`:
+
+    http://127.0.0.1:8787/?switcher=1
+    https://lemtar.github.io/sweet-day-pwa-demo/?switcher=1
+
+Direct public demo links:
+
+    https://lemtar.github.io/sweet-day-pwa-demo/?biz=cakes
+    https://lemtar.github.io/sweet-day-pwa-demo/?biz=flowers
+    https://lemtar.github.io/sweet-day-pwa-demo/?biz=toys
+    https://lemtar.github.io/sweet-day-pwa-demo/?biz=grocery
+
+When Taras sends a few photos of a real shop, update or add one preset in `script.js`
+instead of rebuilding the whole app.
+
 ## Demo Script
 
 1. Open the app on a phone-sized screen.
