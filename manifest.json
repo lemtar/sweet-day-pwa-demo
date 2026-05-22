@@ -1,0 +1,32 @@
+{
+  "name": "Sweet Day Mini Shop",
+  "short_name": "Sweet Day",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f7fb",
+  "theme_color": "#111827",
+  "description": "Demo mini app for custom cakes and festive desserts",
+  "categories": ["food", "shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Каталог",
+      "short_name": "Каталог",
+      "url": "./index.html#catalog"
+    },
+    {
+      "name": "Історії",
+      "short_name": "Історії",
+      "url": "./index.html#stories"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uk" id="top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Sweet Day">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Sweet Day | Mini Shop</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icons/icon.svg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Міні-додаток кондитера</p>
+        <h1>Sweet Day</h1>
+      </div>
+      <button class="icon-button" id="cartButton" type="button" aria-label="Кошик">
+        <span>Кошик</span>
+        <strong id="cartCount">0</strong>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p>Торти, капкейки та святкові десерти на замовлення</p>
+          <h2>Каталог робіт, начинки і швидка заявка у Viber або Telegram</h2>
+          <div class="hero-actions">
+            <a href="#catalog" class="primary-action">Дивитись каталог</a>
+            <a href="tel:+380000000000" class="secondary-action">Подзвонити</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="info-strip" aria-label="Переваги">
+        <div><strong>Замовлення</strong><span>краще за 2-4 дні</span></div>
+        <div><strong>Формат</strong><span>торти, бокси, кенді-бар</span></div>
+        <div><strong>Заявки</strong><span>Viber / Telegram / дзвінок</span></div>
+      </section>
+
+      <section class="maker-section" aria-label="Про майстриню">
+        <div class="maker-photo">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Майстриня готує десерти">
+        </div>
+        <div class="maker-copy">
+          <p class="eyebrow">Про майстриню</p>
+          <h2>Домашні десерти від Тетяни для сімейних свят</h2>
+          <p>
+            Кожне замовлення обговорюється особисто: смак, вага, декор, напис і дата видачі.
+            У каталозі можна подивитись приклади робіт, а в заявці коротко описати своє свято.
+          </p>
+          <div class="maker-facts">
+            <span>5+ років випічки</span>
+            <span>Дитячі та сімейні свята</span>
+            <span>Індивідуальний декор</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-grid" id="stories" aria-label="Проєкти та відгуки">
+        <article>
+          <p class="eyebrow">Проєкт</p>
+          <h3>День народження Софійки</h3>
+          <p>Ніжний торт з ягідною начинкою, капкейки для дітей і невеликий солодкий бокс для гостей.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Відгук</p>
+          <h3>“Було красиво і дуже смачно”</h3>
+          <p>Замовляли торт на 2.5 кг, усе встигли до свята, декор зробили саме як на прикладі.</p>
+        </article>
+        <article>
+          <p class="eyebrow">Блог</p>
+          <h3>Як вибрати начинку</h3>
+          <p>Для дітей краще легкі креми й ягоди, для дорослих часто беруть шоколад, карамель або горіхи.</p>
+        </article>
+      </section>
+
+      <section class="section-head" id="catalog">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2>Популярні десерти</h2>
+        </div>
+        <label class="search">
+          <span>Пошук</span>
+          <input id="searchInput" type="search" placeholder="торт, капкейки, макарони">
+        </label>
+      </section>
+
+      <nav class="filters" aria-label="Категорії">
+        <button class="filter active" type="button" data-category="all">Усе</button>
+        <button class="filter" type="button" data-category="cakes">Торти</button>
+        <button class="filter" type="button" data-category="desserts">Десерти</button>
+        <button class="filter" type="button" data-category="events">Свята</button>
+        <button class="filter" type="button" data-category="sale">Акції</button>
+      </nav>
+
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+    </main>
+
+    <nav class="app-nav" aria-label="Навігація додатку">
+      <a href="#top" class="app-nav-item active" data-nav="home">
+        <span>⌂</span>
+        <strong>Головна</strong>
+      </a>
+      <a href="#catalog" class="app-nav-item" data-nav="catalog">
+        <span>▦</span>
+        <strong>Каталог</strong>
+      </a>
+      <a href="#stories" class="app-nav-item" data-nav="stories">
+        <span>★</span>
+        <strong>Історії</strong>
+      </a>
+      <button class="app-nav-item" id="mobileCartButton" type="button" data-nav="cart">
+        <span>◴</span>
+        <strong>Заявка</strong>
+      </button>
+    </nav>
+
+    <aside class="drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <div>
+            <p class="eyebrow">Заявка</p>
+            <h2>Обрані товари</h2>
+          </div>
+          <button class="ghost-button" id="closeCart" type="button">Закрити</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <form class="order-form" id="orderForm">
+          <label>Ім'я <input name="name" autocomplete="name" placeholder="Ваше ім'я"></label>
+          <label>Телефон <input name="phone" autocomplete="tel" placeholder="+380..."></label>
+          <label>Коментар <textarea name="comment" rows="3" placeholder="Дата, вага, начинка, напис, самовивіз або доставка"></textarea></label>
+          <button class="primary-action full" type="submit">Сформувати заявку</button>
+        </form>
+        <p class="order-preview" id="orderPreview"></p>
+      </div>
+    </aside>
+
+    <script src="script.js"></script>
+  </body>
+</html>
